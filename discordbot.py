@@ -28,7 +28,7 @@ async def no(message):
     if(message == "u"):
         await client.say("false, 'tis indeed thou")
     if(message == "me"):
-        await client.say("no me")
+        await client.say("false, 'tis indeed me")
 
 	
 client.run('NDEzNDY2MTQxMTg5NzM0NDMw.DWZSnw.W6Di4Rldu70f4SdyORmSvDmVaRE')
