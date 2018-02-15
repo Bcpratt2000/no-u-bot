@@ -23,12 +23,9 @@ async def on_ready():
 	print('Created by Habchy#1665')
 	return await client.change_presence(game=discord.Game(name='the drums')) #This is buggy, let us know if it doesn't work.
 
-@client.command()
-async def no(message):
-    if(message == "u"):
-        await client.say("false, 'tis indeed thou")
-    if(message == "me"):
-        await client.say("false, 'tis indeed me")
-
+@client.event
+async def on_message(message):
+	if((message.content == "no u") & (message.channel.name == "battle-bots")):
+        	await client.send_message(message.channel, "false, 'tis indeed thou")
 	
 client.run('NDEzNDY2MTQxMTg5NzM0NDMw.DWZSnw.W6Di4Rldu70f4SdyORmSvDmVaRE')
