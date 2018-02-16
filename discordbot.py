@@ -23,7 +23,7 @@ async def on_message(message):
 	#only work on battle-bots channel
 	if(message.channel.name == "battle-bots") | (message.author.name == "cabobalot"):
 		print(message.author.name + ": " + message.content)
-		if(message.content == "no u") & (message.author.bot == false):
+		if(message.content == "no u") & (message.author.bot == False):
 			await client.send_message(message.channel, "false, 'tis indeed thou.")
 		elif(message.content.lower() == "!setbattle true"):
 			await client.send_message(message.channel, "!setBattle False")
